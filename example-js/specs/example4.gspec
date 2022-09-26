@@ -1,0 +1,23 @@
+## Tags
+
+# Declaring objects
+
+@objects
+    header    id    header
+        
+
+# Declaring sections
+
+= Header =
+    @on mobile
+        header:
+            height 60px
+
+    @on tablet
+        header:
+            height 80px
+
+    @on dektop
+        header:
+            height 100px
+                

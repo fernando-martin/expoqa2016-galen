@@ -1,0 +1,20 @@
+## Advanced specs
+
+# Declaring objects
+
+@objects
+    menu-item-*    css    #menu li a
+        
+# Declaring sections
+
+= Menu =
+    global:
+        count any menu-item-* is 4
+    
+    @for [1 - 4] as index
+        menu-item-${index}:
+            text is "Item ${index}"
+
+    @forEach [menu-item-*] as itemName, prev as previousItem
+        ${itemName}:
+            aligned horizontally all ${previousItem}
